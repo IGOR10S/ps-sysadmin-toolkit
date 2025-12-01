@@ -87,7 +87,7 @@ Get-Process -Name "<PROCESS_NAME[]>" -FileVersionInfo
 ### Start a process or executable file
 
 ```powershell
-Start-Process -FilePath "<PROCESS_NAME> or <FILE_PATH>"
+Start-Process -FilePath "<PROCESS_NAME/FILE_PATH>"
 ```
 
 ## Get-WindowsOptionalFeature
@@ -227,13 +227,13 @@ Get-ADComputer -Identity "<ADComputer>" -Properties Description | Select-Object 
 ### Show details for a list of AD computers
 
 ```powershell
-Get-Content "C:\script_usc\<USER_NAME>\Server_List.txt" | ForEach-Object {Get-ADComputer -Identity $_ -Properties Description | Select-Object Name, DNSHostName, Description} | Format-Table -AutoSize
+Get-Content "C:\Users\<USER_NAME>\Documents\Server_List.txt" | ForEach-Object {Get-ADComputer -Identity $_ -Properties Description | Select-Object Name, DNSHostName, Description} | Format-Table -AutoSize
 ```
 
 ### Export details for a list of AD computers
 
 ```powershell
-Get-Content "C:\script_usc\<USER_NAME>\Server_List.txt" | ForEach-Object { Get-ADComputer -Identity $_ -Properties Description | Select-Object Name, DNSHostName, Description } | Export-Csv -Path "C:\script_usc\<USER_NAME>\Server_Output.csv" -NoTypeInformation -Encoding UTF8
+Get-Content "C:\Users\<USER_NAME>\Documents\Server_List.txt" | ForEach-Object { Get-ADComputer -Identity $_ -Properties Description | Select-Object Name, DNSHostName, Description } | Export-Csv -Path "C:\Users\<USER_NAME>\Documents\Server_Output.csv" -NoTypeInformation -Encoding UTF8
 ```
 
 ## Get-ADDomainController
@@ -309,7 +309,7 @@ netstat -abno
 ### Show keyword-filtered active connections and processes
 
 ```bash
-netstat -abno | findstr -i "Cynet"
+netstat -abno | findstr -i "<KEYWORD>"
 ```
 
 ## query
