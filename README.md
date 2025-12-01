@@ -1,5 +1,8 @@
 # PowerShell & Command Prompt Commands
 
+> [!NOTE]
+> The index **titles will be linked later** so you can reach the commands faster. **PowerShell scripts** will also be added to create an actual toolkit.
+
 INDEX
 
 1. GENERAL (PowerShell)
